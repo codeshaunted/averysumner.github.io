@@ -61,7 +61,7 @@ body {
 
 .album-carousel-item:hover::before {
     transform: translateZ(-1px) translateY(-50%);
-    transition: 0.2s ease;
+    transition: 1.5s ease;
 }
 
 .vinyl-link {
