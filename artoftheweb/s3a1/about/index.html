@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Class Plays - About</title>
+</head>
+
+<body>
+    <a class="back-button" href="../"><h2><- Back to Game</h2></a>
+    <div class="container">
+        <div class="about">
+            <h2>Inspiration</h2>
+            <p>This performance is heavily inspired by the 2014 social experiment <a href="https://en.wikipedia.org/wiki/Twitch_Plays_Pok%C3%A9mon">Twitch Plays Pokémon</a>, where thousands of people simulatenously played Pokémon for the Nintendo Game Boy by giving inputs through live stream chat on Twitch.</p>
+            <div class="nes-container is-rounded">
+                <img src="tpp.gif">
+                <h6>The original Twitch Plays Pokémon stream (<i>via Wikimedia Commons</i>)</h6>
+            </div>
+
+            <h2>Adaptation</h2>
+            <p>This project adapts the original Twitch Plays Pokémon concept to a different game and platform, allowing users to a small group setting. Rather than thousands of players giving their inputs through Twitch chat, up to six people give their input via smartphone with a control scheme inspired by Kahoot/Jackbox.</p>
+
+            <h2>Plan</h2>
+            <p>The "written component" of the script is the collection of actions that each player gives to the game. To make this more interesting, each player has access to a limited subset of the buttons, to promote collaboration.</p>
+
+            <h2>Script</h2>
+            <p>JavaScript on the main "host"'s browser uses a modified version of the <a href="https://github.com/endrift/gbajs">GBA.js</a> emulator for the Nintendo Game Boy Advance (GBA) to run a game (intended to be Pokémon, but any GBA game will work) and "perform" the "script" by executing players' inputs from their smartphones on the emulator in real-time.</p>
+
+            <h2>Execute</h2>
+            <p>In theory, this performance can go on indefinitely. The players could beat the game, or they could become stuck as happened many times in the original Twitch Plays Pokémon. But, no matter what the players do, barring a crash or closing the browser window (or my server going down), the emulator will never stop excecuting the inputs that the players give. The emulator has no concept of the "end" of the game and will continue running. Thus, any continution of the "script" beyond 5 minutes is up to the players, or lack thereof.</p>
+        
+            <h2>Technical Details</h2>
+            <p>To forward your inputs from your smartphone, this project uses WebSocket communication with a backend server hosted in the cloud. Each time you press a button on your smartphone, a small amount of data is sent to the server, and then forwarded to the main "host"'s browser to be executed on the emulator.</p>
+        </div>
+    </div>
+</body>
+
+</html>

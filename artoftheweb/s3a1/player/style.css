@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Jersey+10&family=Press+Start+2P&family=Tiny5&display=swap');
+
+:root {
+    --button-size: 20vmin;
+    --button-gap: 10vmin;
+    --gba-color: #7716ab;
+}
+
+html,
+body {
+    background: var(--gba-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', system-ui;
+    color: white;
+    overflow: hidden;
+
+    touch-action: none;
+
+    /* safari doesn't follow standards */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.status-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--gba-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+    visibility: hidden;
+}
+
+.status-screen.name-prompt {
+    font-size: 3vmin;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vmin;
+}
+
+.status-screen.connecting::after {
+    content: 'Connecting';
+    width: 10ch;
+    animation: connecting 3s infinite;
+}
+
+.status-screen.game-ended::after {
+    content: 'Game Ended';
+}
+
+.status-screen.lost-connection::after {
+    content: 'Lost Connection';
+}
+
+@keyframes connecting {
+    0% {
+        content: 'Connecting';
+    }
+
+    25% {
+        content: 'Connecting.';
+    }
+
+    50% {
+        content: 'Connecting..';
+    }
+
+    75% {
+        content: 'Connecting...';
+    }
+}
+
+.game-button {
+    background: none;
+    background-size: cover;
+    position: relative;
+    border: none;
+    width: var(--button-size);
+    height: var(--button-size);
+    filter: drop-shadow(0 calc(var(--button-size) / 16) 0 grey);
+    transition: all 0.05s ease;
+
+    /* hacks because apple doesn't comply with standards :) */
+    will-change: filter, transform;
+    /* make safari actually render this properly */
+    touch-action: manipulation;
+    /* prevent double tap zoom on iOS */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* remove tap highlight on iOS */
+}
+
+.game-button:active {
+    filter: none;
+    transform: translateY(calc(var(--button-size) / 16));
+}
+
+.game-button.a {
+    background-image: url("../a-button.svg");
+}
+
+.game-button.b {
+    background-image: url("../b-button.svg");
+}
+
+.game-button.l {
+    background-image: url("../l-button.svg");
+}
+
+.game-button.r {
+    background-image: url("../r-button.svg");
+}
+
+.game-button.up {
+    background-image: url("../up-button.svg");
+}
+
+.game-button.down {
+    background-image: url("../down-button.svg");
+}
+
+.game-button.left {
+    background-image: url("../left-button.svg");
+}
+
+.game-button.right {
+    background-image: url("../right-button.svg");
+}
+
+.game-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(var(--button-size) * 2 + var(--button-gap));
+    flex-wrap: wrap;
+    gap: var(--button-gap);
+}
+
+@media only screen and (orientation: landscape) {
+    .game-button-container {
+        max-width: calc(var(--button-size) * 4 + var(--button-gap) * 3);
+    }
+}

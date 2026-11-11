@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    background-color: #008080;
+    overflow: hidden;
+}
+
+.window {
+    --min-width: 280px;
+    --min-height: 98px;
+    position: relative;
+    width: var(--min-width);
+    height: var(--min-height);
+    min-width: var(--min-width);
+    min-height: var(--min-height);
+    user-select: none;
+    top: calc(50vh - (var(--min-height) / 2));
+    left: calc(50vw - (var(--min-width) / 2));
+}
+
+.window-body img {
+    float: left;
+    padding-right: 10px;
+    image-rendering: pixelated;
+}
+
+.button-container {
+    display: flex;
+    justify-content: right;
+}
+
+.button-container button {
+    margin-left: 5px;
+}
+
+.resize {
+    position: absolute;
+    z-index: 999;
+}
+
+.resize.n {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    cursor: ns-resize;
+}
+
+.resize.s {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    cursor: ns-resize;
+}
+
+.resize.e {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: ew-resize;
+}
+
+.resize.w {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: ew-resize;
+}
+
+.resize.ne {
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nesw-resize;
+}
+
+.resize.nw {
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize;
+}
+
+.resize.se {
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize;
+}
+
+.resize.sw {
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nesw-resize;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+}
+
+.webring {
+    image-rendering: pixelated;
+    font-family: 'Pixelated MS Sans Serif', Arial;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 11px;
+}
+
+.webring-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.webring-container img {
+    width: 55%;
+    margin: 6px;
+    align-self: center;
+}

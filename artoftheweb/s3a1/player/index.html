@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
+    <title>Class Plays - Player</title>
+</head>
+
+<body>
+    <div class="game-button-container">
+    </div>
+    <div class="status-screen connecting">
+    </div>
+    <div class="status-screen game-ended">
+    </div>
+    <div class="status-screen lost-connection">
+    </div>
+    <div class="status-screen name-prompt">
+        What is your name?
+        <div class="nes-field">
+  <input type="text" id="name-field" class="nes-input">
+</div>
+<button type="button" class="nes-btn" onclick="setName(document.getElementById('name-field').value)">OK</button>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+:root {
+    --album-carousel-radius: 25vmin;
+    --album-carousel-item-size: 20vmin;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    background: black;
+    font-family: 'Bitcount Grid Single';
+    overflow: hidden;
+}
+
+.album-carousel {
+    position: relative;
+    width: 25vmin;
+    height: 25vmin;
+    transform-style: preserve-3d;
+    cursor: grab;
+}
+
+.album-carousel:active {
+    cursor: grabbing;
+}
+
+.album-carousel-item {
+    inset: 0;
+    margin: auto;
+    position: absolute;
+    width: var(--album-carousel-item-size);
+    height: var(--album-carousel-item-size);
+    transform-style: preserve-3d;
+    background-size: cover;
+    box-shadow: 0 0 5px 1px white;
+    backface-visibility: hidden;
+}
+
+.album-carousel-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("vinyl.png");
+    background-size: 110%;
+    background-position: center center;
+    transform: translateY(0%) translateZ(-1px);
+    backface-visibility: hidden;
+    filter: drop-shadow(0 0 0.5px white);
+}
+
+.album-carousel-item:not(:hover)::before {
+    transform: translateZ(-1px) translateY(0%);
+    transition: 1.5s ease;
+}
+
+.album-carousel-item:hover::before {
+    transform: translateZ(-1px) translateY(-50%);
+    transition: 1.5s ease;
+    transition-delay: 0.75s;
+}
+
+.vinyl-link {
+    pointer-events: none;
+    top: 0%;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    transform: translateZ(-1px);
+}
+
+.album-carousel-item:hover .vinyl-link {
+    pointer-events: auto;
+    transform: translateZ(-1px) translateY(-100%);
+}
+
+.album-carousel-item:nth-child(1) {
+    background-image: url("isthisit.png");
+    transform: rotateY(0deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-carousel-item:nth-child(2) {
+    background-image: url("roomonfire.jpg");
+    transform: rotateY(60deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-carousel-item:nth-child(3) {
+    background-image: url("firstimpressionsofearth.jpg");
+    transform: rotateY(120deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-carousel-item:nth-child(4) {
+    background-image: url("angles.jpg");
+    transform: rotateY(180deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-carousel-item:nth-child(5) {
+    background-image: url("comedownmachine.jpg");
+    transform: rotateY(240deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-carousel-item:nth-child(6) {
+    background-image: url("thenewabnormal.png");
+    transform: rotateY(300deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-modal {
+    color: white;
+    position: absolute;
+    box-shadow: 0 0 5px 1px white;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 2vmin;
+}
+
+.album-modal .cover-and-blurb {
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1;
+}
+
+.album-modal .tracklist {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2vmin;
+}
+
+.album-modal a {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: white;
+}
+
+.cover-and-blurb h2 {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.cover-and-blurb h5 {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.cover-and-blurb img {
+    flex: 1;
+    min-height: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px white);
+    margin-top: 1vmin;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.album-modal:not(:target) {
+    visibility: hidden;
+}
+
+@media only screen and (orientation: portrait) {
+    :root {
+        --album-carousel-radius: 27vmin;
+        --album-carousel-item-size: 22vmin;
+    }
+
+    .album-carousel-item:nth-child(1) {
+        transform: rotateX(0deg) translateZ(var(--album-carousel-radius));
+    }
+
+    .album-carousel-item:nth-child(2) {
+        transform: rotateX(60deg) translateZ(var(--album-carousel-radius));
+    }
+
+    .album-carousel-item:nth-child(3) {
+        transform: rotateX(120deg) translateZ(var(--album-carousel-radius));
+    }
+
+    .album-carousel-item:nth-child(4) {
+        transform: rotateX(180deg) translateZ(var(--album-carousel-radius));
+    }
+
+    .album-carousel-item:nth-child(5) {
+        transform: rotateX(240deg) translateZ(var(--album-carousel-radius));
+    }
+
+    .album-carousel-item:nth-child(6) {
+        transform: rotateX(300deg) translateZ(var(--album-carousel-radius));
+    }
+
+    .album-carousel-item:not(:hover)::before {
+        transform: translateZ(-1px) translateX(0%);
+    }
+
+    .album-carousel-item:hover::before {
+        transform: translateZ(-1px) translateX(50%);
+    }
+
+    .album-carousel-item:hover .vinyl-link {
+        pointer-events: auto;
+        transform: translateZ(-1px) translateX(100%);
+    }
+
+    .album-modal {
+        flex-direction: column;
+        width: 50vw;
+        height: 80vh;
+
+    }
+
+    .album-modal .tracklist {
+        margin: 0;
+    }
+
+    .vinyl-link {
+        width: 50%;
+        height: 100%;
+        right: 0%;
+    }
+}

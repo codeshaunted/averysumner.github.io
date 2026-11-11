@@ -1,0 +1,69 @@
+/*
+    Values and images adapted from an archive of the Silk Road clearnet page
+    https://web.archive.org/web/20110304201806/http://silkroadmarket.org/
+*/
+
+body {
+    font-family: verdana, helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#silk-road-logo {
+    float: left;
+}
+
+#silk-road-title {
+    font-size: 41px;
+}
+
+#silk-road-subtitle {
+    font-style: italic;
+}
+
+span {
+    color: rgb(0, 90, 10);
+    font-weight: bold;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(0, 90, 10);
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(0, 90, 10);
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(0, 165, 20);
+    font-weight: bold;
+}
+
+h3 {
+    text-align: center;
+}
+
+.yes-button {
+    text-align: center;
+    position: relative;
+    left: 30%;
+    float: left;
+}
+
+.no-button {
+    text-align: center;
+    position: relative;
+    right: 30%;
+    float: right;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        What browser should I use?
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+</head>
+
+<body>
+    <div class="icon-container">
+        <a href="https://ekeas.github.io/s1fp" class="webring">
+            <div class="webring-container">
+                <img src="rat.png">
+                Little Chef
+            </div>
+        </a>
+    </div>
+
+    <div class="window">
+        <div class="resize n"></div>
+        <div class="resize s"></div>
+        <div class="resize e"></div>
+        <div class="resize w"></div>
+        <div class="resize ne"></div>
+        <div class="resize nw"></div>
+        <div class="resize se"></div>
+        <div class="resize sw"></div>
+
+        <div class="title-bar active">
+            <div class="title-bar-text">Quick Question</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="errorDialogs(50)"></button>
+                <button id="maximize-or-restore-button" onclick="maximizeOrRestore()" aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="errorDialogs(50)"></button>
+            </div>
+        </div>
+        <div class="window-body has-space">
+            <img src="question-icon.png">
+            <p>Do you want to be able to use websites made in the last decade?</p>
+            <div class="button-container"><button
+                    onclick="window.location.href='/artoftheweb/s1fp/oopsallchrome';">Yes</button>
+                <button onclick="window.location.href='/artoftheweb/s1fp/internetexplorer';">No</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

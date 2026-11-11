@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SUSE Mono', monospace;
+}
+
+main {
+    display: inline-block;
+}
+
+#container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container > h1 {
+    font-size: 4vmin;
+    margin: 0;
+}
+
+#container > h2 {
+    margin: 0;
+    margin-bottom: 7vmin;
+}
+
+#content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5vmin;
+}
+
+#control-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vmin;
+    width: 30vmin;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(220, 220, 220);
+    border-radius: 2vmin;
+    padding: 0 3vmin 3vmin 3vmin;
+    filter: drop-shadow(0 0 0.3vmin black);
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    font-size: 3vmin;
+    background-color: orange;
+    padding: 1vmin;
+    border-radius: 1vmin;
+    filter: drop-shadow(0 0 0.1vmin black);
+    user-select: none;
+    font-family: 'SUSE Mono', monospace;
+}
+
+button:hover {
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+button:active {
+    filter: none;
+}
+
+/* range slider based on code from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+input[type=range] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 80%;
+    height: 1vmin;
+    border-radius: 1vmin;
+    background: rgb(220, 220, 220);
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2vmin;
+    height: 2vmin;
+    border-radius: 50%;
+    background: orange;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 2vmin;
+    height: 2vmin;
+    border-radius: 50%;
+    background: orange;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background: darkorange;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+    background: darkorange;
+}
+
+label {
+    font-size: 2.5vmin;
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fraction {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fraction > :nth-child(2) {
+    border-top: 0.4vmin solid black;
+    flex-direction: row;
+}

@@ -1,0 +1,440 @@
+#wrapper {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: lightgray;
+    overflow: hidden;
+    perspective: 600px;
+  }
+  
+  #tv {
+    background-color: #737373;
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    bottom: 43%;
+    left: 23%;
+    transform: rotateX(10deg) rotateY(23deg) rotateZ(-15deg);
+    border-radius: 5px;
+    filter: drop-shadow(0px 1px 1px);
+    transition: 1s;
+    z-index: 0;
+  }
+  
+  #tv:hover {
+    transform: scale(2);
+    transition: 1s;
+    left: 30%;
+    z-index: 999999;
+    filter: none;
+  }
+  
+  #tv-bezel {
+    position: relative;
+    width: 90%;
+    height: 55%;
+    top: 5%;
+    left: 5%;
+    background-color: #262626;
+    border-radius: 5px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #737373;
+    font-weight: bold;
+    font-size: 8px;
+  }
+  
+  .tv-bezel-small-text {
+    top: -4%;
+    font-size: 5px;
+    letter-spacing: 0.5px;
+  }
+  
+  #casio-logo {
+    position: relative;
+    top: -1%;
+    left: 30%;
+    width: 30%;
+    padding: 5px;
+    color: #737373;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  #tv-antenna {
+    position: absolute;
+    background-color: #e3e3e3;
+    width: 10px;
+    height: 200px;
+    top: -85%;
+    left: -3%;
+    border-radius: 5px;
+  }
+  
+  #tv-screen {
+    position: relative;
+    width: 68%;
+    height: 54%;
+    top: -3%;
+    left: 9%;
+    border: 4px solid #737373;
+    border-radius: 1px;
+    background-color: white;
+  }
+  
+  #tv-canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #tv-button-left {
+    position: absolute;
+    background-color: #262626;
+    width: 15%;
+    height: 10%;
+    right: 27%;
+    top: 62%;
+    border-bottom-left-radius: 8px;
+  }
+  
+  #tv-button-right {
+    position: absolute;
+    background-color: #262626;
+    width: 15%;
+    height: 10%;
+    right: 10%;
+    top: 62%;
+    border-bottom-right-radius: 8px;
+  }
+  
+  #tv-logo-container {
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+  }
+  
+  #tv-logo-crystal {
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 9px;
+    line-height: 5px;
+    transform: scale(1.1, 1);
+  }
+  
+  #tv-logo-vision {
+    display: inline-block;
+    border: 1px solid black;
+    background: linear-gradient(
+      90deg,
+      #4169e1,
+      #8a2be2,
+      #dc143c,
+      #ff4500,
+      #ffd700
+    );
+    transform: scale(1.1, 1);
+    font-weight: bold;
+    line-height: 13px;
+  }
+  
+  #floppydisk {
+    width: 150px;
+    height: 150px;
+    background-color: #f5f5f2;
+    transform: rotateX(20deg) rotateY(0deg) rotateZ(10deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%);
+    border-radius: 4px;
+    transition: 1s;
+  }
+  
+  #floppydisk-container {
+    position: absolute;
+    bottom: 100px;
+    left: 110px;
+    filter: drop-shadow(1px 1px 1px);
+    transition: 1s;
+    z-index: 0;
+  }
+  
+  #floppydisk-container:hover {
+    filter: none;
+    transition: 1s;
+    z-index: 999999;
+  }
+  
+  #floppydisk:hover {
+    transform: scale(2);
+    transition: 1s;
+    left: 20%;
+    bottom: 20%;
+  }
+  
+  #floppydisk-label {
+    position: absolute;
+    background-color: #e3e3d8;
+    left: 12.5%;
+    width: 75%;
+    height: 60%;
+    border-bottom-left-radius: 5px;
+    font-size: 12px;
+  }
+  
+  #floppydisk-label-text {
+  }
+  
+  #apple-logo {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 6px;
+    width: 12px;
+  }
+  
+  #floppydisk-shutter {
+    background-color: #adaaaa;
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+    height: 33.33%;
+    left: 25%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  #floppydisk-shutter-hole {
+    background-color: #f5f5f2;
+    position: absolute;
+    width: 25%;
+    height: 75%;
+    top: 10%;
+    left: 15%;
+    border-radius: 2px;
+  }
+  
+  .heart {
+    position: relative;
+    background: #94241c;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+  }
+  
+  .heart::before {
+    content: "";
+    background: #94241c;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    left: -50%;
+  }
+  
+  .heart::after {
+    content: "";
+    background: #94241c;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    top: -50%;
+  }
+  
+  #card:hover {
+    transform: scale(2);
+    transition: 1s;
+    z-index: 999999;
+    bottom: 20%;
+    left: 40%;
+    filter: none;
+  }
+  
+  #card {
+    background-color: #faf3f2;
+    position: absolute;
+    width: 100px;
+    height: 140px;
+    left: 30%;
+    bottom: 15%;
+    transform: rotateX(10deg) rotateZ(55deg);
+    border-radius: 5%;
+    filter: drop-shadow(1px 1px 1px);
+    transition: 1s;
+    z-index: 0;
+  }
+  
+  .card-middle-heart-container {
+    --size: 15px;
+    position: absolute;
+    top: calc(50% - (var(--size) / 2));
+    left: calc(50% - (var(--size) / 2));
+    width: var(--size);
+    height: var(--size);
+  }
+  
+  .card-top-left-heart-container {
+    --size: 10px;
+    position: absolute;
+    top: 6%;
+    left: 8%;
+    width: var(--size);
+    height: var(--size);
+  }
+  
+  .card-top-left-heart-text {
+    color: red;
+    padding-bottom: 50%;
+  }
+  
+  .card-bottom-right-heart-container {
+    --size: 10px;
+    position: absolute;
+    bottom: 6%;
+    right: 8%;
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(180deg);
+  }
+  
+  .card-text {
+    text-align: center;
+    color: #94241c;
+    padding-bottom: 50%;
+  }
+  
+  #cd-sleeve {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    bottom: 12%;
+    right: 25%;
+    transform: rotateX(20deg) rotateZ(-30deg);
+    filter: drop-shadow(-1px 1px 1px);
+    transition: 1s;
+    z-index: 0;
+  }
+  
+  #cd-sleeve:hover {
+    transform: scale(2);
+    transition: 1s;
+    z-index: 999999;
+    left: 50%;
+    bottom: 30%;
+    filter: none;
+  }
+  
+  #adobe-logo {
+    left: 7%;
+    top: 7%;
+    position: absolute;
+    width: 30%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 6px;
+  }
+  
+  #cd-sleeve-art {
+    top: 21%;
+    width: 100%;
+    position: absolute;
+    height: 79%;
+  }
+  
+  #cd-sleeve-art-drawing {
+    width: 100%;
+    height: 67.5%;
+    background-image: url("https://codeshaunted.com/artoftheweb/s1a2/acrobat.jpg");
+    background-size: contain;
+  }
+  
+  #cd-sleeve-art-label {
+    font-family: sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 23px;
+  }
+  
+  #magazine {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: #eb4034;
+    top: -30%;
+    right: 20%;
+    transform: rotateX(45deg) rotateY(-5deg) rotateZ(20deg) translateZ(-270px);
+    filter: drop-shadow(0px 1px 1px);
+    transition: 1s;
+    z-index: 0;
+  }
+  
+  #magazine-cover {
+    position: absolute;
+    border: 2px solid black;
+    width: 90%;
+    left: 5%;
+    height: 92%;
+    top: 4%;
+    background-image: url("https://codeshaunted.com/artoftheweb/s1a2/timeyou.jpg");
+    background-size: contain;
+  }
+  
+  #magazine-address {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    width: 115px;
+    height: 52px;
+    background-color: #fafafa;
+  }
+  
+  #magazine-address-text {
+    font-family: sans-serif;
+    font-size: 6px;
+    padding: 10px;
+  }
+  
+  #magazine-screen {
+    position: absolute;
+    width: 63.9%;
+    height: 28.7%;
+    left: 17.7%;
+    top: 28.5%;
+  }
+  
+  #magazine-screen video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transform: rotateZ(0.25deg);
+    border: 1px solid black;
+  }
+  
+  #magazine:hover {
+    transform: scale(1.35);
+    transition: 1s;
+    z-index: 999999;
+    top: 20%;
+    filter: none;
+  }
+  
+  #table {
+    width: 100%;
+    height: 100%;
+    transform: rotateX(45deg) rotateY(0deg) rotateZ(0deg) scale(1.5);
+    background-image: url("https://codeshaunted.com/artoftheweb/s1a2/table.jpg");
+  }
+  
+  #board {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: yellow;
+    transform: rotateX(20deg) rotateY(0deg) rotateZ(10deg);
+    bottom: 100px;
+    left: 110px;
+  }
+  

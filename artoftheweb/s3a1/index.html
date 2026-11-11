@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="gbajs/util.js"></script>
+	<script src="gbajs/core.js"></script>
+	<script src="gbajs/arm.js"></script>
+	<script src="gbajs/thumb.js"></script>
+	<script src="gbajs/mmu.js"></script>
+	<script src="gbajs/io.js"></script>
+	<script src="gbajs/audio.js"></script>
+	<script src="gbajs/video.js"></script>
+	<script src="gbajs/video/proxy.js"></script>
+	<script src="gbajs/video/software.js"></script>
+	<script src="gbajs/irq.js"></script>
+	<script src="gbajs/keypad.js"></script>
+	<script src="gbajs/sio.js"></script>
+	<script src="gbajs/savedata.js"></script>
+	<script src="gbajs/gpio.js"></script>
+	<script src="gbajs/gba.js"></script>
+	<script src="gbajs/xhr.js"></script>
+
+	<script src=" https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js "></script>
+	<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
+
+	<title>Class Plays - Host</title>
+</head>
+
+<body>
+	<div class="main-container">
+		<div class="nes-container is-dark with-title">
+			<p class="title">Game</p>
+			<canvas id="screen"></canvas>
+		</div>
+		<div class="qr-and-input-container">
+			<div class="qr-window nes-container with-title">
+				<p class="title">Join!</p>
+				<div id="room-qr" class="qr-container">
+				</div>
+			</div>
+			<div class="input-log-window nes-container with-title">
+				<p class="title">Script</p>
+				<div id="input-list" class="input-list">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<input id="loader" type="file" accept=".gba" onchange="run(this.files[0]);">
+</body>
+
+<footer>
+	<a href="about">About</a>
+	|
+	<a href="gbajs/COPYING">GBA.js License</a>
+	|
+	<a href="https://github.com/nostalgic-css/NES.css">NES.css</a>
+</footer>
+
+</html>

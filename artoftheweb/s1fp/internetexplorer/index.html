@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        What browser should I use?
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+</head>
+
+<body>
+    <div class="window">
+        <div class="resize n"></div>
+        <div class="resize s"></div>
+        <div class="resize e"></div>
+        <div class="resize w"></div>
+        <div class="resize ne"></div>
+        <div class="resize nw"></div>
+        <div class="resize se"></div>
+        <div class="resize sw"></div>
+
+        <div class="title-bar active">
+            <div class="title-bar-text">Blast from the past</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="errorDialogs(50)"></button>
+                <button id="maximize-or-restore-button" onclick="maximizeOrRestore()" aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="errorDialogs(50)"></button>
+            </div>
+        </div>
+        <div class="window-body has-space">
+            <!-- Internet Explorer icon taken from install disk archive https://archive.org/details/Windows-XP-Professional-ISO-Version-2002-SP2-OEM-Disc-Image -->
+            <img src="iexplore.png">
+            <p>You should use Internet Explorer! It has numerous security vulnerabilities and lacks support for most modern JavaScript and CSS features, making it the perfect choice if you don't care about security or browsing modern websites.</p>
+            <div class="button-container">
+                <button onclick="window.location.href='/artoftheweb/s1fp';">Return to start</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="/artoftheweb/s1fp/doyouwanttousemodernsites/index.js"></script>
+</body>
+
+</html>
