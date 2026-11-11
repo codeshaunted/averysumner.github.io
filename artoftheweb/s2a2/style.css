@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
 
 :root {
+    --album-count: 7;
     --album-carousel-radius: 25vmin;
     --album-carousel-item-size: 20vmin;
 }
@@ -41,6 +42,8 @@ body {
     background-size: cover;
     box-shadow: 0 0 5px 1px white;
     backface-visibility: hidden;
+    --angle: calc(var(--i) * 360deg / var(--album-count));
+    transform: rotateY(var(--angle)) translateZ(var(--album-carousel-radius));
 }
 
 .album-carousel-item::before {
@@ -81,33 +84,38 @@ body {
 }
 
 .album-carousel-item:nth-child(1) {
+    --i: 0;
     background-image: url("isthisit.jpg");
-    transform: rotateY(0deg) translateZ(var(--album-carousel-radius));
 }
 
 .album-carousel-item:nth-child(2) {
+    --i: 1;
     background-image: url("roomonfire.jpg");
-    transform: rotateY(60deg) translateZ(var(--album-carousel-radius));
 }
 
 .album-carousel-item:nth-child(3) {
+    --i: 2;
     background-image: url("firstimpressionsofearth.jpg");
-    transform: rotateY(120deg) translateZ(var(--album-carousel-radius));
 }
 
 .album-carousel-item:nth-child(4) {
+    --i: 3;
     background-image: url("angles.jpg");
-    transform: rotateY(180deg) translateZ(var(--album-carousel-radius));
 }
 
 .album-carousel-item:nth-child(5) {
+    --i: 4;
     background-image: url("comedownmachine.jpg");
-    transform: rotateY(240deg) translateZ(var(--album-carousel-radius));
 }
 
 .album-carousel-item:nth-child(6) {
+    --i: 5;
     background-image: url("thenewabnormal.jpg");
-    transform: rotateY(300deg) translateZ(var(--album-carousel-radius));
+}
+
+.album-carousel-item:nth-child(7) {
+    --i: 6;
+    background-image: url("realityawaits.jpg");
 }
 
 .album-modal {
@@ -177,28 +185,8 @@ body {
         --album-carousel-item-size: 22vmin;
     }
 
-    .album-carousel-item:nth-child(1) {
-        transform: rotateX(0deg) translateZ(var(--album-carousel-radius));
-    }
-
-    .album-carousel-item:nth-child(2) {
-        transform: rotateX(60deg) translateZ(var(--album-carousel-radius));
-    }
-
-    .album-carousel-item:nth-child(3) {
-        transform: rotateX(120deg) translateZ(var(--album-carousel-radius));
-    }
-
-    .album-carousel-item:nth-child(4) {
-        transform: rotateX(180deg) translateZ(var(--album-carousel-radius));
-    }
-
-    .album-carousel-item:nth-child(5) {
-        transform: rotateX(240deg) translateZ(var(--album-carousel-radius));
-    }
-
-    .album-carousel-item:nth-child(6) {
-        transform: rotateX(300deg) translateZ(var(--album-carousel-radius));
+    .album-carousel-item {
+        transform: rotateX(var(--angle)) translateZ(var(--album-carousel-radius));
     }
 
     .album-carousel-item:not(:hover)::before {
