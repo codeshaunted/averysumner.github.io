@@ -2,7 +2,7 @@
 
 :root {
     --album-count: 7;
-    --album-carousel-radius: 30vmin;
+    --album-carousel-radius: 28vmin;
     --album-carousel-item-size: 20vmin;
 }
 
@@ -181,7 +181,7 @@ body {
 
 @media only screen and (orientation: portrait) {
     :root {
-        --album-carousel-radius: 32.4vmin;
+        --album-carousel-radius: 30.2vmin;
         --album-carousel-item-size: 22vmin;
     }
 
