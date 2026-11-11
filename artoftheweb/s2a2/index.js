@@ -85,6 +85,9 @@ function handleDragEnd(e) {
     requestAnimationFrame(animate);
 }
 
+// a native drag of a link or selection swallows mousemove/mouseup and freezes :hover
+document.addEventListener('dragstart', (e) => e.preventDefault());
+
 document.onmousedown = handleDragStart;
 document.onmousemove = handleDragMove;
 document.onmouseup = handleDragEnd;
