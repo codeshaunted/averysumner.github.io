@@ -126,3 +126,23 @@ window.onresize = (e) => {
     velocity = 0;
     renderRot();
 }
+
+// spin on load and coast to a stop with the first album facing front
+function spinIn(initialVelocity) {
+    // run the same decay as animate() ahead of time to find how far the spin will travel
+    let travel = 0;
+    let v = initialVelocity;
+    while (Math.abs(v) >= 0.01) {
+        v *= friction;
+        travel += v;
+    }
+
+    rot = -travel;
+    velocity = initialVelocity;
+    renderRot();
+    requestAnimationFrame(animate);
+}
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    spinIn(25);
+}
