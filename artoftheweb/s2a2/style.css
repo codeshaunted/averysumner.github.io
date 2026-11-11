@@ -79,7 +79,7 @@ body {
 }
 
 .album-carousel-item:nth-child(1) {
-    background-image: url("isthisit.png");
+    background-image: url("isthisit.jpg");
     transform: rotateY(0deg) translateZ(var(--album-carousel-radius));
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .album-carousel-item:nth-child(6) {
-    background-image: url("thenewabnormal.png");
+    background-image: url("thenewabnormal.jpg");
     transform: rotateY(300deg) translateZ(var(--album-carousel-radius));
 }
 
