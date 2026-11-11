@@ -144,5 +144,5 @@ function spinIn(initialVelocity) {
 }
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    spinIn(25);
+    spinIn(-45);
 }
