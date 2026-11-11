@@ -346,7 +346,7 @@
   #cd-sleeve-art-drawing {
     width: 100%;
     height: 67.5%;
-    background-image: url("https://codeshaunted.com/artoftheweb/s1a2/acrobat.jpg");
+    background-image: url("acrobat.jpg");
     background-size: contain;
   }
   
@@ -377,7 +377,7 @@
     left: 5%;
     height: 92%;
     top: 4%;
-    background-image: url("https://codeshaunted.com/artoftheweb/s1a2/timeyou.jpg");
+    background-image: url("timeyou.jpg");
     background-size: contain;
   }
   
@@ -425,7 +425,7 @@
     width: 100%;
     height: 100%;
     transform: rotateX(45deg) rotateY(0deg) rotateZ(0deg) scale(1.5);
-    background-image: url("https://codeshaunted.com/artoftheweb/s1a2/table.jpg");
+    background-image: url("table.jpg");
   }
   
   #board {

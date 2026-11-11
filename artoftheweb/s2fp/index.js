@@ -23,7 +23,7 @@ function setup() {
     pickFBO = createFramebuffer({
         format: UNSIGNED_BYTE
     });
-    teapot = loadModel('https://p5js.org/assets/teapot.obj', true);
+    teapot = loadModel('teapot.obj', true);
 
     cam = createCamera();
     setCamera(cam);
