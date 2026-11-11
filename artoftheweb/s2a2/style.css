@@ -85,37 +85,37 @@ body {
 
 .album-carousel-item:nth-child(1) {
     --i: 0;
-    background-image: url("isthisit.jpg");
+    background-image: url("isthisit.webp");
 }
 
 .album-carousel-item:nth-child(2) {
     --i: 1;
-    background-image: url("roomonfire.jpg");
+    background-image: url("roomonfire.webp");
 }
 
 .album-carousel-item:nth-child(3) {
     --i: 2;
-    background-image: url("firstimpressionsofearth.jpg");
+    background-image: url("firstimpressionsofearth.webp");
 }
 
 .album-carousel-item:nth-child(4) {
     --i: 3;
-    background-image: url("angles.jpg");
+    background-image: url("angles.webp");
 }
 
 .album-carousel-item:nth-child(5) {
     --i: 4;
-    background-image: url("comedownmachine.jpg");
+    background-image: url("comedownmachine.webp");
 }
 
 .album-carousel-item:nth-child(6) {
     --i: 5;
-    background-image: url("thenewabnormal.jpg");
+    background-image: url("thenewabnormal.webp");
 }
 
 .album-carousel-item:nth-child(7) {
     --i: 6;
-    background-image: url("realityawaits.jpg");
+    background-image: url("realityawaits.webp");
 }
 
 .album-modal {
